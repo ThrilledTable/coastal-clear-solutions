@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaleidoscopic-starlight-68686d.netlify.app/sitemap.xml
