@@ -1,6 +1,6 @@
 ---
 name: lead-responder
-description: Drafts responses to inbound customer inquiries (email, contact form, social) for Coastal Clear Solutions. Use whenever there's a new lead/inquiry that needs a reply drafted. Always produces a draft for human review — never sends automatically.
+description: Drafts responses to inbound customer inquiries (email, contact form, social) for SoundView Window Care. Use whenever there's a new lead/inquiry that needs a reply drafted. Always produces a draft for human review — never sends automatically.
 tools:
   - Read
 ---

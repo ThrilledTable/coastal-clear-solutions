@@ -1,7 +1,12 @@
-# Coastal Clear Solutions — Client Acquisition Orchestrator
+# SoundView Window Care — Client Acquisition Orchestrator
 
 ## Business context
 Window cleaning service, Nassau & Suffolk County, Long Island NY.
+Business name is **SoundView Window Care** (renamed from an earlier working
+name that conflicted with an existing competitor — don't search for or
+reference the old name).
+Live site: https://kaleidoscopic-starlight-68686d.netlify.app (placeholder
+Netlify subdomain — swap this note out once a real domain is live).
 Currently pre-revenue: Calendly is live and correctly configured, but zero
 bookings to date. **The priority is lead generation, not ops management.**
 Do not build automation for booking/scheduling volume that doesn't exist yet.
