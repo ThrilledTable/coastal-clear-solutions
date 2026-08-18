@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundView Window Care | Long Island</title>
+    <meta name="description" content="Professional window cleaning services in Nassau & Suffolk Counties. Crystal clear windows, streak-free results. Book online today!">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SoundView</div>
+            <a href="#book" class="btn btn-small">Book Now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Let the Sunshine In</h1>
+            <p>Professional window cleaning for homes and businesses in Nassau & Suffolk Counties. Streak-free results, every time.</p>
+            <a href="#book" class="btn btn-primary">Schedule Cleaning</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Residential</h3>
+                    <p class="price">Get a Quote</p>
+                    <ul>
+                        <li>Interior & exterior windows</li>
+                        <li>Screen cleaning</li>
+                        <li>Track & frame cleaning</li>
+                        <li>Storm windows</li>
+                    </ul>
+                    <a href="#quote" class="btn btn-primary">Get a Quote Now</a>
+                </div>
+                <div class="service-card">
+                    <h3>Commercial</h3>
+                    <p class="price">Get a Quote</p>
+                    <ul>
+                        <li>Office buildings</li>
+                        <li>Retail storefronts</li>
+                        <li>Multi-unit properties</li>
+                        <li>Scheduled maintenance</li>
+                    </ul>
+                    <a href="#quote" class="btn btn-primary">Get a Quote Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="areas">
+        <div class="container">
+            <h2>Service Area</h2>
+            <p class="area-text">Proudly serving <strong>Nassau County</strong> and <strong>Suffolk County</strong>, New York.</p>
+            <div class="areas-list">
+                <span>Nassau County</span>
+                <span>Suffolk County</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3>Streak-Free Guarantee</h3>
+                    <p>We don't leave until your windows sparkle.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3>Local & Reliable</h3>
+                    <p>Long Island based. We show up when we say we will.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Competitive rates with no hidden fees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote" class="quote">
+        <div class="container">
+            <h2>Get a Free Quote</h2>
+            <p>Calculate your residential window cleaning cost in seconds.</p>
+            
+            <div class="quote-form">
+                <div class="form-group">
+                    <label for="windowCount">Number of Windows</label>
+                    <input type="number" id="windowCount" min="1" placeholder="Enter number of windows">
+                </div>
+                
+                <div class="form-group">
+                    <label for="serviceType">Service Type</label>
+                    <select id="serviceType">
+                        <option value="basic">Basic (Interior + Exterior)</option>
+                        <option value="screens">Basic + Screen Cleaning</option>
+                        <option value="full">Full Service (Windows + Screens + Tracks + Frames)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="homeType">Home Type</label>
+                    <select id="homeType">
+                        <option value="standard">Standard Home</option>
+                        <option value="colonial">Colonial (2+ floors)</option>
+                        <option value="apartment">Apartment/Condo</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="btn btn-primary" onclick="calculateQuote()">Calculate Quote</button>
+                
+                <div id="quoteResult" class="quote-result" style="display: none;">
+                    <h3>Your Estimated Price: <span id="quotePrice">$0</span></h3>
+                    <p>This is an estimate. Final price may vary based on condition.</p>
+                    <a href="#book" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="booking">
+        <div class="container">
+            <h2>Book Your Cleaning</h2>
+            <p>Schedule your appointment online in just a few clicks.</p>
+            <p class="booking-note"><strong>$15 deposit</strong> required to secure your booking. Balance due upon service completion.</p>
+            <div class="calendly-embed">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/jonclaudferreira/window-cleaning-clone" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+            <p class="alt-booking">Or call us directly: <a href="tel:9296964577">929-696-4577</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SoundView Window Care. All rights reserved.</p>
+            <p class="contact">📞 <a href="tel:9296964577">929-696-4577</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateQuote() {
+            const windows = parseInt(document.getElementById('windowCount').value) || 0;
+            const serviceType = document.getElementById('serviceType').value;
+            const homeType = document.getElementById('homeType').value;
+            
+            if (windows < 1) {
+                alert('Please enter the number of windows');
+                return;
+            }
+            
+            // Base price per window
+            let pricePerWindow = 10;
+            
+            // Service type adjustments
+            if (serviceType === 'screens') {
+                pricePerWindow += 3;
+            } else if (serviceType === 'full') {
+                pricePerWindow += 6;
+            }
+            
+            // Home type adjustments
+            if (homeType === 'colonial') {
+                pricePerWindow += 2;
+            } else if (homeType === 'apartment') {
+                pricePerWindow -= 2;
+            }
+            
+            // Calculate total
+            let total = windows * pricePerWindow;
+            
+            // Apply minimum
+            if (total < 75) {
+                total = 75;
+            }
+            
+            // Bulk discount
+            if (windows >= 20) {
+                total = total * 0.9; // 10% off
+            }
+            
+            document.getElementById('quotePrice').textContent = '$' + total.toFixed(0);
+            document.getElementById('quoteResult').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
